@@ -1,0 +1,84 @@
+@import "../../assets/styles/global.scss";
+
+.loginModal {
+    height: 550px;
+    overflow-y: scroll;
+    display: grid;
+    width: 650px;
+    grid-template-columns: 40% 60%;
+
+    .modalLeft {
+        background-color: var(--primaryColor);
+        padding: 20px 25px;
+        color: var(--basicWhite);
+
+        .loginHead {
+            font-size: $xlFont;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .loginHeadText {
+            font-size: $mmFont;
+            font-weight: 350;
+            line-height: 25px;
+        }
+    }
+
+    .modalRight {
+        position: relative;
+        padding: 30px;
+
+        .closeIcon {
+            right: 10px;
+            top: 10px;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            color: var(--grey);
+            cursor: pointer;
+        }
+
+        .MuiTextField-root {
+            width: 100%;
+        }
+
+        .terms {
+            font-size: $xsFont;
+            color: var(--grey);
+            margin-top: 30px;
+
+            .blueText {
+                color: var(--primaryColor);
+                cursor: pointer;
+            }
+        }
+
+        .loginButton {
+            border: none;
+            width: 100%;
+            padding: 15px 0;
+            cursor: pointer;
+            color: var(--basicWhite);
+            border-radius: 3px;
+            background-color: var(--orangeButton);
+        }
+
+        .loginButton1 {
+            background-color: var(--basicWhite);
+            color: var(--primaryColor);
+            margin: 10px 0;
+            border-top: 1px solid var(--boxShadow1);
+        }
+
+        .registerButton {
+            text-align: center;
+            font-size: $msFont;
+            color: var(--primaryColor);
+            position: absolute;
+            bottom: 30px;
+            width: 90%;
+            cursor: pointer;
+        }
+    }
+}

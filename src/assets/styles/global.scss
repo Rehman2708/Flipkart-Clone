@@ -3,6 +3,7 @@
     --primaryColor: #2874f0;
     --secondaryColor: #5d4b24;
     --textColor: #000;
+    --orangeButton: #FD5729;
     --bgColor1: #3d3f45;
     --bgColor2: #2b2d35;
     --grey: #808080c7;
@@ -44,7 +45,7 @@ a {
 }
 
 .boxShadow1 {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 ::-webkit-scrollbar {

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./header.scss";
 import {
   BsArrow90DegUp,
@@ -9,8 +10,19 @@ import {
   BsFillQuestionSquareFill,
   BsSearch,
 } from "react-icons/bs";
-
+import LoginModal from "../Auth/LoginModal";
+import RegisterModal from "../Auth/RegisterModal";
 const Header = () => {
+  //login modal
+
+  const [openLogin, setOpenLogin] = React.useState(false);
+  const handleOpenLogin = () => setOpenLogin(true);
+  const handleCloseLogin = () => setOpenLogin(false);
+
+  //Register Modal
+  const [openRegister, setOpenRegister] = React.useState(false);
+  const handleOpenRegister = () => setOpenRegister(true);
+  const handleCloseRegister = () => setOpenRegister(false);
   return (
     <div className="header flexCenter">
       <div>
@@ -32,7 +44,21 @@ const Header = () => {
         />
         <BsSearch />
       </div>
-      <button className="loginButton">Login</button>
+      <LoginModal
+        open={openLogin}
+        handleOpen={handleOpenLogin}
+        handleClose={handleCloseLogin}
+        handleOpenRegister={handleOpenRegister}
+      />
+      <div style={{ display: "none" }}>
+        <RegisterModal
+          open={openRegister}
+          handleOpen={handleOpenRegister}
+          handleClose={handleCloseRegister}
+          handleOpenLogin={handleOpenLogin}
+          hide={true}
+        />
+      </div>
       <p className="headOption">Become a Seller</p>
       <p className="headOption floatingParent flexCenter">
         More

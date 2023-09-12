@@ -6,6 +6,9 @@
     background-color: red;
     background-color: var(--primaryColor);
     gap: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 
     .fkLogo {
         width: 80px;
@@ -55,6 +58,7 @@
         font-weight: 500;
         border-radius: 2px;
         font-size: $sFont;
+        cursor: pointer;
     }
 
     .headOption {
