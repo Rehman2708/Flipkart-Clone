@@ -1,0 +1,59 @@
+:root {
+    // colors
+    --primaryColor: #2874f0;
+    --secondaryColor: #5d4b24;
+    --textColor: #000;
+    --bgColor1: #3d3f45;
+    --bgColor2: #2b2d35;
+    --grey: #808080c7;
+    --basicWhite: white;
+    --halfWhite: #ffffffe6;
+    --boxShadow1: #00000030;
+    --boxShadow2: #00000005;
+
+}
+
+// fonts-sizes
+$xsFont: 0.75rem;
+$msFont: 0.875rem;
+$sFont: 1rem;
+$mmFont: 1.125rem;
+$mFont: 1.25rem;
+$lFont: 1.5rem;
+$xlFont: 1.75rem;
+$xxlFont: 2rem;
+
+body,
+button,
+input {
+    font-family: Roboto,
+        Arial,
+        sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxShadow1 {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 100px;
+}

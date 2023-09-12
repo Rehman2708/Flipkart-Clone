@@ -1,0 +1,119 @@
+@import "../../assets/styles/global.scss";
+
+.header {
+    height: 56px;
+    width: 100%;
+    background-color: red;
+    background-color: var(--primaryColor);
+    gap: 20px;
+
+    .fkLogo {
+        width: 80px;
+    }
+
+    .plusExplore {
+        margin: -5px 0;
+        color: white;
+        font-size: $xsFont;
+    }
+
+    .plusExplorePlus {
+        color: rgb(237, 203, 10);
+        margin-left: 5px;
+    }
+
+    .headInputTextDiv {
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+            color: var(--primaryColor);
+            stroke-width: 0.7;
+            height: 25px;
+            width: 20px;
+            padding: 5px;
+        }
+    }
+
+    .headInputText {
+        width: 25vw;
+        height: 35px;
+        border: none;
+        outline: none;
+        padding-left: 20px;
+        border-radius: 2px;
+    }
+
+    .loginButton {
+        height: 33px;
+        border: none;
+        color: var(--primaryColor);
+        background-color: var(--basicWhite);
+        padding: 0 40px;
+        font-weight: 500;
+        border-radius: 2px;
+        font-size: $sFont;
+    }
+
+    .headOption {
+        color: var(--basicWhite);
+        font-weight: 550;
+        gap: 10px;
+        margin-left: 15px;
+    }
+
+    .floatingParent {
+        position: relative;
+        height: 56px;
+        cursor: pointer;
+        animation: all 3s linear;
+
+
+        .floatingOptions {
+            position: absolute;
+            top: 56px;
+            width: 220px;
+            background-color: var(--basicWhite);
+            border-radius: 3px;
+            display: none;
+            z-index: 1;
+
+            .floatingOption {
+                font-size: $msFont;
+                font-weight: 500;
+                border-bottom: 1px solid var(--boxShadow1);
+                color: var(--textColor);
+                display: flex;
+                gap: 10px;
+                margin: 0;
+                padding: 15px 10px;
+
+                &:hover {
+                    background-color: var(--boxShadow2);
+                    cursor: pointer;
+                }
+
+                svg {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+
+        .DownArrow {
+            transition: all 0.15s linear;
+        }
+
+        &:hover .DownArrow {
+            transform: rotate(-180deg);
+        }
+
+    }
+
+    .floatingParent:hover .floatingOptions,
+    .floatingOption:hover .floatingOptions {
+        display: block;
+
+    }
+}

@@ -1,0 +1,100 @@
+@import "../../assets/styles/global.scss";
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--basicWhite);
+
+    .category {
+        flex-direction: column;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--primaryColor);
+        }
+
+        .categoryImg {
+            height: 60px;
+        }
+
+        .categoryName {
+            margin: 0;
+            font-size: $msFont;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    #fashion {
+        position: relative;
+        cursor: pointer;
+        animation: all 3s linear;
+        padding: 15px 0;
+
+        .floatingOptions {
+            position: absolute;
+            top: 110px;
+            width: 200px;
+            background-color: var(--basicWhite);
+            border-radius: 3px;
+            display: none;
+            z-index: 1;
+
+            .floatingOption {
+                font-size: $msFont;
+                font-weight: 500;
+                // border-bottom: 1px solid var(--boxShadow1);
+                color: var(--textColor);
+                display: flex;
+                gap: 10px;
+                margin: 0;
+                padding: 15px 10px;
+
+                &:hover {
+                    background-color: var(--boxShadow2);
+                    cursor: pointer;
+                    color: var(--primaryColor);
+                }
+
+                svg {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+
+        .DownArrow {
+            transition: all 0.15s linear;
+        }
+
+        &:hover .DownArrow {
+            transform: rotate(-180deg);
+        }
+
+    }
+
+    #fashion:hover .floatingOptions,
+    #fashion:hover .floatingOptions {
+        display: block;
+
+    }
+}
+
+.carousel {
+    // width: auto;
+    margin: 10px;
+    display: flex;
+    overflow-x: scroll;
+    // overflow-x: hidden;
+    width: calc(100% - 20px);
+
+
+    img {
+        // width: calc(100% + 100px);
+        width: 2000px;
+        // height: 90px;
+    }
+}
