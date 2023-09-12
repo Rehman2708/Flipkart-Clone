@@ -11,6 +11,7 @@ const modalStyle = {
   bgcolor: "white",
   boxShadow: 20,
   borderRadius: 1,
+  outline: "none",
 };
 export default function RegisterModal({
   open,
@@ -25,10 +26,6 @@ export default function RegisterModal({
   handleOpenLogin: any;
   hide?: boolean;
 }) {
-  //   const [open, setOpen] = React.useState(false);
-  //   const handleOpen = () => setOpen(true);
-  //   const handleClose = () => setOpen(false);
-
   const handleLogin = () => {
     handleOpenLogin();
     handleClose();

@@ -8,6 +8,10 @@
     background-color: var(--textColor);
     color: var(--halfWhite);
     border-top: 1px solid var(--grey);
+    // position: static;
+    // bottom: 0;
+    width: 100%;
+    max-width: 1460px;
 
 
     .slogan {
@@ -33,6 +37,26 @@
     .MailOption {
         border-left: 1px solid var(--grey);
         padding-left: 30px;
+
+        .footerOptions {
+            line-height: 20px;
+
+            &:hover {
+                cursor: auto;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .regAddress {
+        .footerOptions {
+            line-height: 20px;
+
+            &:hover {
+                cursor: auto;
+                text-decoration: none;
+            }
+        }
     }
 
 }

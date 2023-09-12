@@ -1,10 +1,10 @@
 import React from "react";
 import "./categories.scss";
-import carouselImg1 from "../../assets/Images/carousel/carousel1.png";
-import carouselImg2 from "../../assets/Images/carousel/carousel2.png";
-import carouselImg3 from "../../assets/Images/carousel/carousel3.png";
-import carouselImg4 from "../../assets/Images/carousel/carousel4.png";
-import carouselImg5 from "../../assets/Images/carousel/carousel5.png";
+import carouselImg1 from "../../../assets/Images/carousel/carousel1.png";
+import carouselImg2 from "../../../assets/Images/carousel/carousel2.png";
+import carouselImg3 from "../../../assets/Images/carousel/carousel3.png";
+import carouselImg4 from "../../../assets/Images/carousel/carousel4.png";
+import carouselImg5 from "../../../assets/Images/carousel/carousel5.png";
 import { BsChevronDown } from "react-icons/bs";
 // import Carousel from "react-multi-carousel";
 
@@ -131,7 +131,7 @@ const VehicleOptions = () => (
 const Categories = () => {
   return (
     <div>
-      <div className="categories boxShadow1">
+      <div className="categories boxShadow2">
         {categories.map((ele: any, i: number) => (
           <div className="flexCenter category" id="fashion">
             <img className="categoryImg" src={ele.image} />

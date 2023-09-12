@@ -11,6 +11,7 @@ const modalStyle = {
   bgcolor: "white",
   boxShadow: 20,
   borderRadius: 1,
+  outline: "none",
 };
 
 export default function LoginModal({

@@ -98,12 +98,14 @@ const Products = () => {
         </div>
         <div className="ProductsCarousel">
           {bftData.map((ele: any, i: number) => (
-            <div className="productData flexCenter">
-              <img src={ele.image} />
-              <p>{ele.value}</p>
-              <p className="discountRate">Upto {ele.discount}% off</p>
-              <p className="prodCaption">{ele.caption}</p>
-            </div>
+            <a href="/detail">
+              <div className="productData flexCenter">
+                <img src={ele.image} />
+                <p>{ele.value}</p>
+                <p className="discountRate">Upto {ele.discount}% off</p>
+                <p className="prodCaption">{ele.caption}</p>
+              </div>
+            </a>
           ))}
         </div>
       </div>

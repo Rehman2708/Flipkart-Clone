@@ -64,8 +64,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div>
-          <p className="slogan"> Registered Office Address:</p>
+        <div className="regAddress">
+          <p className="slogan "> Registered Office Address:</p>
           <div className="footerRow">
             <p className="footerOptions">
               Flipkart Internet Private Limited,

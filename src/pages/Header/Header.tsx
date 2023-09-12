@@ -25,7 +25,7 @@ const Header = () => {
   const handleCloseRegister = () => setOpenRegister(false);
   return (
     <div className="header flexCenter">
-      <div>
+      <a href="/">
         <img
           className="fkLogo"
           src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -35,7 +35,7 @@ const Header = () => {
           Explore
           <strong className="plusExplorePlus">Plus</strong>
         </p>
-      </div>
+      </a>
       <div className="headInputTextDiv flexCenter">
         <input
           className="headInputText"
