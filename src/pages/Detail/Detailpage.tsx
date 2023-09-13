@@ -1,5 +1,5 @@
 import React from "react";
-import { monsoonProducts, products } from "../../Data";
+import { products } from "../../Data";
 import { useParams } from "react-router-dom";
 import "./detailPage.scss";
 const offers = [
@@ -11,16 +11,16 @@ const offers = [
 const Detailpage = () => {
   const { id } = useParams();
   const product = products.find((product) => product.id === id);
-  const monsoonProduct = monsoonProducts.find(
-    (monsoonProduct) => monsoonProduct.id === id
-  );
-  const key = product?.category == "bft" ? product : monsoonProduct;
+  // const monsoonProduct = monsoonProducts.find(
+  //   (monsoonProduct) => monsoonProduct.id === id
+  // );
+  // const key = product?.category == "bft" ? product : monsoonProduct;
   return (
     <div className="detailMain">
-      <img className="productImage" src={key?.image} alt="" />
+      <img className="productImage" src={product?.image} alt="" />
       <div className="detailRight">
-        <h1>₹{key?.price}</h1>
-        <h1>{key?.value}</h1>
+        <h1>₹{product?.price}</h1>
+        <h1>{product?.value}</h1>
         <h3>Available offers</h3>
         {offers.map((ele: any, i: number) => (
           <p>{offers[i]}</p>

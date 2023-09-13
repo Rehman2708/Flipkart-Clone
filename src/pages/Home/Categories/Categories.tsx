@@ -6,8 +6,13 @@ import carouselImg3 from "../../../assets/Images/carousel/carousel3.png";
 import carouselImg4 from "../../../assets/Images/carousel/carousel4.png";
 import carouselImg5 from "../../../assets/Images/carousel/carousel5.png";
 import { BsChevronDown } from "react-icons/bs";
-// import Carousel from "react-multi-carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
+// import Carousel from "react-multi-carousel";
 const categories = [
   {
     image:
@@ -155,9 +160,21 @@ const Categories = () => {
         ))}
       </div>
       <div className="carousel">
-        {carousel.map((ele: any, i: number) => (
-          <img src={ele} alt="" />
-        ))}
+        <Swiper
+          loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {carousel.map((ele: any, i: number) => (
+            <SwiperSlide>
+              <img src={ele} alt="" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
