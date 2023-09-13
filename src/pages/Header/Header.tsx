@@ -83,8 +83,8 @@ const Header = () => {
         </div>
       </p>
       <p className="headOption flexCenter">
-        Cart
         <BsFillCartFill />
+        Cart
       </p>
     </div>
   );

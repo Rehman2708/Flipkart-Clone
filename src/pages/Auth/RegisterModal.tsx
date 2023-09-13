@@ -60,7 +60,7 @@ export default function RegisterModal({
             </p>
             <button className="loginButton">Continue</button>
             <button
-              className="loginButton loginButton1 boxShadow1"
+              className="loginButton loginButton1 boxShadow2"
               onClick={handleLogin}
             >
               Existing User? Log in
