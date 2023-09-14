@@ -1,37 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./products.scss";
 import { products } from "../../../Data";
-import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
-import Home from "../Home";
-import Footer from "../../Footer/Footer";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import ItemsCarousel from "react-items-carousel";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 const Products = () => {
-  const swiperBP = {
-    600: {
-      slidesPerView: 2,
-      // spaceBetween: 20,
-    },
-    740: {
-      slidesPerView: 3,
-      // spaceBetween: 20,
-    },
-    900: {
-      slidesPerView: 4,
-      // spaceBetween: 40,
-    },
-    1200: {
-      slidesPerView: 5,
-      // spaceBetween: 50,
-    },
-    1400: {
-      slidesPerView: 6,
-      // spaceBetween: 50,
-    },
-  };
+  const [active, setaAtive] = useState(0);
+  const [active1, setaAtive1] = useState(0);
+  const innerWidth = window.innerWidth;
+
   return (
     <>
       <div className="products">
@@ -46,16 +23,24 @@ const Products = () => {
           />
         </div>
         <div className="ProductsCarousel">
-          <Swiper
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            breakpoints={swiperBP}
-          >
-            {products.map(
-              (ele: any, i: number) =>
-                ele.category == "bft" && (
-                  <div className="prodIntro flexCenter">
-                    <SwiperSlide>
+          <div style={{ width: "100%" }}>
+            <ItemsCarousel
+              requestToChangeActive={(value: any) => setaAtive(value)}
+              activeItemIndex={active}
+              numberOfCards={4}
+              gutter={0}
+              autoPlay={true}
+              timeout={0}
+              disableSwipe={true}
+              leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
+              rightChevron={
+                <BsChevronCompactRight className="catCarouselIcon" />
+              }
+            >
+              {products.map(
+                (ele: any, i: number) =>
+                  ele.category == "bft" && (
+                    <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
                           <img src={ele.image} />
@@ -67,11 +52,11 @@ const Products = () => {
                           )}
                         </div>
                       </a>
-                    </SwiperSlide>
-                  </div>
-                )
-            )}
-          </Swiper>
+                    </div>
+                  )
+              )}
+            </ItemsCarousel>
+          </div>
         </div>
       </div>
       <div className="products">
@@ -80,16 +65,24 @@ const Products = () => {
           <button className="prodIntroButton">VIEW ALL</button>
         </div>
         <div className="ProductsCarousel">
-          <Swiper
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            breakpoints={swiperBP}
-          >
-            {products.map(
-              (ele: any, i: number) =>
-                ele.category == "mp" && (
-                  <div className="prodIntro flexCenter">
-                    <SwiperSlide>
+          <div style={{ width: "100%" }}>
+            <ItemsCarousel
+              requestToChangeActive={(value: any) => setaAtive1(value)}
+              activeItemIndex={active1}
+              numberOfCards={innerWidth < 1000 ? 3 : 5}
+              gutter={0}
+              autoPlay={true}
+              timeout={0}
+              disableSwipe={true}
+              leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
+              rightChevron={
+                <BsChevronCompactRight className="catCarouselIcon" />
+              }
+            >
+              {products.map(
+                (ele: any, i: number) =>
+                  ele.category == "mp" && (
+                    <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
                           <img src={ele.image} />
@@ -101,11 +94,11 @@ const Products = () => {
                           )}
                         </div>
                       </a>
-                    </SwiperSlide>
-                  </div>
-                )
-            )}
-          </Swiper>
+                    </div>
+                  )
+              )}
+            </ItemsCarousel>
+          </div>
         </div>
       </div>
     </>

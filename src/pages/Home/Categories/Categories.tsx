@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./categories.scss";
 import carouselImg1 from "../../../assets/Images/carousel/carousel1.png";
 import carouselImg2 from "../../../assets/Images/carousel/carousel2.png";
 import carouselImg3 from "../../../assets/Images/carousel/carousel3.png";
 import carouselImg4 from "../../../assets/Images/carousel/carousel4.png";
 import carouselImg5 from "../../../assets/Images/carousel/carousel5.png";
-import { BsChevronDown } from "react-icons/bs";
+import {
+  BsChevronCompactLeft,
+  BsChevronCompactRight,
+  BsChevronDown,
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import ItemsCarousel from "react-items-carousel";
 
 // import Carousel from "react-multi-carousel";
 const categories = [
@@ -134,6 +141,8 @@ const VehicleOptions = () => (
   </>
 );
 const Categories = () => {
+  const [active, setaAtive] = useState(0);
+
   return (
     <div>
       <div className="categories boxShadow2">
@@ -160,21 +169,25 @@ const Categories = () => {
         ))}
       </div>
       <div className="carousel">
-        <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-        >
-          {carousel.map((ele: any, i: number) => (
-            <SwiperSlide>
+        <div style={{ width: "100%" }}>
+          <ItemsCarousel
+            requestToChangeActive={(value: any) => setaAtive(value)}
+            activeItemIndex={active}
+            numberOfCards={1}
+            gutter={0}
+            autoPlay={true}
+            infiniteLoop={true}
+            timeout={0}
+            disableSwipe={true}
+            autoPlaySpeed={1000}
+            leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
+            rightChevron={<BsChevronCompactRight className="catCarouselIcon" />}
+          >
+            {carousel.map((ele: any, i: number) => (
               <img src={ele} alt="" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ))}
+          </ItemsCarousel>
+        </div>
       </div>
     </div>
   );
