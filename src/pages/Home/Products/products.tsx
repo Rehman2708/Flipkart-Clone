@@ -37,7 +37,9 @@ const Products = () => {
       <div className="products">
         <div className="prodIntro flexCenter">
           <h1 className="prodIntroText">Beauty, Foods, Toys & More</h1>
-          <button className="prodIntroButton">VIEW ALL</button>
+          <a href="/allproducts">
+            <button className="prodIntroButton">VIEW ALL</button>
+          </a>
           <img
             className="prodIntroImg"
             src="https://cdn.firstcry.com/education/2022/11/06094158/Toy-Names-For-Kids.jpg"
