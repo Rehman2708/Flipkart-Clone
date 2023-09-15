@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Modal, TextField } from "@mui/material";
 import { AiOutlineClose } from "react-icons/ai";
 import "./loginModal.scss";
+import intro from "../../assets/Images/carousel/Auth.png";
 const modalStyle = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -42,6 +43,7 @@ export default function LoginModal({
             <p className="loginHeadText">
               Get access to your Orders, Wishlist and Recommendations
             </p>
+            <img className="introImg" src={intro} alt="" />
           </div>
           <div className="modalRight">
             <AiOutlineClose className="closeIcon" onClick={handleClose} />

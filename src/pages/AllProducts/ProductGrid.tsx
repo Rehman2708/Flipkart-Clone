@@ -1,9 +1,11 @@
 import React from "react";
 import { products } from "../../Data";
 import "./productGrid.scss";
+import Filters from "./Filter/Filters";
 const ProductGrid = () => {
   return (
-    <>
+    <div className="mainProdGrid">
+      <Filters />
       <div className="productGrid">
         {products.map((ele: any, i: number) => (
           <a href={`/details/${ele.id}`}>
@@ -15,7 +17,7 @@ const ProductGrid = () => {
           </a>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
