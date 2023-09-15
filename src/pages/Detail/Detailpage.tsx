@@ -11,10 +11,7 @@ const offers = [
 const Detailpage = () => {
   const { id } = useParams();
   const product = products.find((product) => product.id === id);
-  // const monsoonProduct = monsoonProducts.find(
-  //   (monsoonProduct) => monsoonProduct.id === id
-  // );
-  // const key = product?.category == "bft" ? product : monsoonProduct;
+
   return (
     <div className="detailMain">
       <img className="productImage" src={product?.image} alt="" />

@@ -152,19 +152,19 @@ const Categories = () => {
             <p className="categoryName">
               {ele.categoryName}
 
-              {(ele.categoryName == "Electronics" ||
-                ele.categoryName == "Home & Furniture" ||
-                ele.categoryName == "Fashion" ||
-                ele.categoryName == "Two wheelers" ||
-                ele.categoryName == "Beauty, toys & more") && (
+              {(ele.categoryName === "Electronics" ||
+                ele.categoryName === "Home & Furniture" ||
+                ele.categoryName === "Fashion" ||
+                ele.categoryName === "Two wheelers" ||
+                ele.categoryName === "Beauty, toys & more") && (
                 <BsChevronDown className="DownArrow" />
               )}
             </p>
-            {ele.categoryName == "Fashion" && <FavouriteOptions />}
-            {ele.categoryName == "Electronics" && <ElectronicsOptions />}
-            {ele.categoryName == "Two wheelers" && <ElectronicsOptions />}
-            {ele.categoryName == "Home & Furniture" && <HomeOptions />}
-            {ele.categoryName == "Beauty, toys & more" && <BeautyOptions />}
+            {ele.categoryName === "Fashion" && <FavouriteOptions />}
+            {ele.categoryName === "Electronics" && <ElectronicsOptions />}
+            {ele.categoryName === "Two wheelers" && <ElectronicsOptions />}
+            {ele.categoryName === "Home & Furniture" && <HomeOptions />}
+            {ele.categoryName === "Beauty, toys & more" && <BeautyOptions />}
           </div>
         ))}
       </div>

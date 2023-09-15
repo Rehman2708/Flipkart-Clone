@@ -39,7 +39,7 @@ const Products = () => {
             >
               {products.map(
                 (ele: any, i: number) =>
-                  ele.category == "bft" && (
+                  ele.category === "bft" && (
                     <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
@@ -81,7 +81,7 @@ const Products = () => {
             >
               {products.map(
                 (ele: any, i: number) =>
-                  ele.category == "mp" && (
+                  ele.category === "mp" && (
                     <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
