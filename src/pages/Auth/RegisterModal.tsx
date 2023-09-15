@@ -27,7 +27,6 @@ export default function RegisterModal({
   hide?: boolean;
 }) {
   const handleLogin = () => {
-    handleOpenLogin();
     handleClose();
   };
 

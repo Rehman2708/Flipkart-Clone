@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Modal, TextField } from "@mui/material";
 import { AiOutlineClose } from "react-icons/ai";
 import "./loginModal.scss";
-import RegisterModal from "./RegisterModal";
 const modalStyle = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -25,9 +24,6 @@ export default function LoginModal({
   handleClose: any;
   handleOpenRegister: any;
 }) {
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
   const handleRegister = () => {
     handleOpenRegister();
     handleClose();
