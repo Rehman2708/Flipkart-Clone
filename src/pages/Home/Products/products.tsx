@@ -19,6 +19,7 @@ const Products = () => {
           </a>
           <img
             className="prodIntroImg"
+            alt=""
             src="https://cdn.firstcry.com/education/2022/11/06094158/Toy-Names-For-Kids.jpg"
           />
         </div>
@@ -43,7 +44,7 @@ const Products = () => {
                     <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
-                          <img src={ele.image} />
+                          <img src={ele.image} alt="" />
                           <p>{ele.value}</p>
                           {ele.discount && (
                             <p className="discountRate">
@@ -85,7 +86,7 @@ const Products = () => {
                     <div className="prodIntro flexCenter">
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
-                          <img src={ele.image} />
+                          <img src={ele.image} alt="" />
                           <p>{ele.value}</p>
                           {ele.discount && (
                             <p className="discountRate">

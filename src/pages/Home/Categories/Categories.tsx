@@ -9,14 +9,10 @@ import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
   BsChevronDown,
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import ItemsCarousel from "react-items-carousel";
 
 // import Carousel from "react-multi-carousel";
@@ -148,10 +144,9 @@ const Categories = () => {
       <div className="categories boxShadow2">
         {categories.map((ele: any, i: number) => (
           <div className="flexCenter category" id="fashion">
-            <img className="categoryImg" src={ele.image} />
+            <img className="categoryImg" alt="" src={ele.image} />
             <p className="categoryName">
               {ele.categoryName}
-
               {(ele.categoryName === "Electronics" ||
                 ele.categoryName === "Home & Furniture" ||
                 ele.categoryName === "Fashion" ||
@@ -162,7 +157,7 @@ const Categories = () => {
             </p>
             {ele.categoryName === "Fashion" && <FavouriteOptions />}
             {ele.categoryName === "Electronics" && <ElectronicsOptions />}
-            {ele.categoryName === "Two wheelers" && <ElectronicsOptions />}
+            {ele.categoryName === "Two wheelers" && <VehicleOptions />}
             {ele.categoryName === "Home & Furniture" && <HomeOptions />}
             {ele.categoryName === "Beauty, toys & more" && <BeautyOptions />}
           </div>
