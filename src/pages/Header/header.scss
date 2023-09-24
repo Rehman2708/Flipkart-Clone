@@ -47,6 +47,7 @@
         border: none;
         outline: none;
         padding-left: 20px;
+        padding-right: 40px;
         border-radius: 2px;
     }
 
@@ -120,5 +121,25 @@
     .floatingOption:hover .floatingOptions {
         display: block;
 
+    }
+}
+
+@media(max-width:900px) {
+    .header {
+        .fkLogo {
+            width: 60px;
+        }
+
+        .plusExplore {
+            font-size: 0.6rem;
+        }
+
+        .headOption {
+            display: none;
+        }
+
+        .loginButton {
+            padding: 0 20px;
+        }
     }
 }

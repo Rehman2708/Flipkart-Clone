@@ -153,3 +153,28 @@
 
 //     }
 // }
+@media(max-width:900px) {
+    .footer {
+        flex-direction: column;
+
+        .MailOption {
+            padding: 0;
+            border: none;
+        }
+    }
+
+    .mFooter {
+        align-items: flex-start;
+
+        .mFooterOption {
+            font-size: $xsFont;
+        }
+
+        .cardsIcons {
+            img {
+
+                width: 90vw;
+            }
+        }
+    }
+}

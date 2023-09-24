@@ -107,6 +107,57 @@
 
     img {
         width: 100%;
-        aspect-ratio: 6/1;
+        aspect-ratio: 5/1;
+    }
+}
+
+@media(max-width:900px) {
+    .categories {
+        overflow-x: scroll;
+        gap: 20px;
+        justify-content: flex-start;
+
+        #fashion {
+            padding: 0;
+
+            .floatingOptions {
+                display: none;
+
+            }
+
+            .DownArrow {
+                display: none;
+            }
+        }
+
+        .category {
+            .categoryImg {
+                height: 40px;
+            }
+
+            .categoryName {
+                width: 80px;
+                font-size: $xsFont;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    .carousel {
+        .catCarouselIcon {
+            height: 50px;
+            width: 20px;
+        }
+
+        img {
+            aspect-ratio: 4/1;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        height: 0px !important;
     }
 }

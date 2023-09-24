@@ -4,12 +4,9 @@ import "./header.scss";
 import {
   BsArrow90DegUp,
   BsBell,
-  BsBellFill,
   BsChevronDown,
   BsDownload,
   BsFillCartFill,
-  BsFillCloudDownloadFill,
-  BsFillQuestionSquareFill,
   BsQuestionCircle,
   BsSearch,
 } from "react-icons/bs";

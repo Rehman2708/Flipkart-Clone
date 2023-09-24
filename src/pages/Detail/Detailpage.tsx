@@ -29,7 +29,7 @@ const Detailpage = () => {
       <div className="detailMain">
         <div>
           <div className="productImgDiv">
-            {like == "0" ? (
+            {like === "0" ? (
               <AiFillHeart className="heartIcon" onClick={() => setLike("1")} />
             ) : (
               <AiFillHeart
@@ -42,7 +42,7 @@ const Detailpage = () => {
           <div className="prodButtonsDiv">
             <button className="buyButton flexCenter" onClick={toggleCart}>
               <BsFillCartFill />
-              {cart == "no" ? "Add to cart" : "Remove from cart"}
+              {cart === "no" ? "Add to cart" : "Remove from cart"}
             </button>
             <button className="buyButton buyButton1 flexCenter">
               <AiFillThunderbolt />
