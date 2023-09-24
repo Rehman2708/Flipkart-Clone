@@ -87,7 +87,7 @@ const Filters = () => {
         </Accordion>
       </div>
       <div className="paddingDiv accordianPaddingDiv">
-        <Accordion defaultExpanded={true}>
+        <Accordion defaultExpanded={false}>
           <AccordionSummary
             expandIcon={<BsChevronDown />}
             aria-controls="panel1a-content"
@@ -108,7 +108,7 @@ const Filters = () => {
         </Accordion>
       </div>
       <div className="paddingDiv accordianPaddingDiv">
-        <Accordion defaultExpanded={true}>
+        <Accordion defaultExpanded={false}>
           <AccordionSummary
             expandIcon={<BsChevronDown />}
             aria-controls="panel1a-content"

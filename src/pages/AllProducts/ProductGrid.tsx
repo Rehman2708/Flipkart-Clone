@@ -17,7 +17,9 @@ const ProductGrid = () => {
               <p className="productName">
                 {ele.value} | best product | click to buy | fast delivery
               </p>
-              <p className="productDiscount">Get {ele.discount}% off</p>
+              <p className="productDiscount">
+                Get {ele.discount ? ele.discount : "15"}% off
+              </p>
               <div className="ratings">
                 <p className="ratingStar">
                   <span>4.2</span> <AiFillStar />

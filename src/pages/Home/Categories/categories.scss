@@ -98,8 +98,8 @@
     }
 
     .catCarouselIcon {
-        height: 120px;
-        width: 50px;
+        height: 100px;
+        width: 40px;
         background-color: var(--basicWhite);
         border-radius: 3px;
         box-shadow: $box-shadow;
@@ -107,6 +107,6 @@
 
     img {
         width: 100%;
-        aspect-ratio: 4/1;
+        aspect-ratio: 6/1;
     }
 }
