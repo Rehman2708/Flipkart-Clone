@@ -4,9 +4,10 @@
     display: grid;
     grid-template-columns: 300px calc(100% - 300px);
 
+
+
     .productGrid {
         display: grid;
-
         justify-content: center;
         align-items: center;
         gap: 20px;
@@ -14,10 +15,83 @@
         padding: 10px;
         background-color: var(--basicWhite);
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        max-height: 150vh;
+        overflow-y: scroll;
 
         .singleProduct {
-
             flex-direction: column;
+            display: flex;
+            padding: 15px;
+            border-radius: 3px;
+            overflow: hidden;
+
+            &:hover {
+
+                box-shadow: $box-shadow1;
+            }
+
+            .productImage {
+                height: 150px;
+                object-fit: contain;
+            }
+
+            .productName,
+            .productDiscount {
+                font-size: $msFont;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+
+            .productDiscount {
+                color: var(--grey);
+            }
+
+            .bankOffer {
+                color: var(--greenColor);
+                font-weight: 500;
+                font-size: $msFont;
+                margin-bottom: 0;
+            }
+
+            .productPrice {
+                font-weight: 500;
+                margin: 0;
+            }
+
+            .ratings {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                font-size: $msFont;
+                color: var(--grey);
+                font-weight: 500;
+
+                .ratingStar {
+                    color: var(--basicWhite);
+                    background-color: var(--greenColor);
+                    border-radius: 3px;
+                    padding: 3px 5px;
+                    font-size: $xsFont;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .assuredImg {
+                    height: 20px;
+
+                }
+
+                .emi {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media(min-width:1400px) {
+        .productGrid {
+            grid-template-columns: 24% 23% 23% 24%;
         }
     }
 }

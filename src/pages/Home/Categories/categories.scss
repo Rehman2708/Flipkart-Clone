@@ -40,24 +40,25 @@
             top: 110px;
             width: 200px;
             background-color: var(--basicWhite);
-            border-radius: 3px;
+            border-radius: 8px;
             display: none;
             z-index: 2;
 
             .floatingOption {
-                font-size: $msFont;
-                font-weight: 500;
+                font-size: $xsFont;
+                font-weight: 400;
                 // border-bottom: 1px solid var(--boxShadow1);
-                color: var(--textColor);
+                color: var(--grey);
                 display: flex;
                 gap: 10px;
                 margin: 0;
-                padding: 15px 10px;
+                padding: 13px 10px;
 
                 &:hover {
                     background-color: var(--boxShadow2);
                     cursor: pointer;
-                    color: var(--primaryColor);
+                    color: var(--textColor);
+                    font-weight: 500;
                 }
 
                 svg {

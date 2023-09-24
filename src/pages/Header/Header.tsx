@@ -3,11 +3,14 @@ import React from "react";
 import "./header.scss";
 import {
   BsArrow90DegUp,
+  BsBell,
   BsBellFill,
   BsChevronDown,
+  BsDownload,
   BsFillCartFill,
   BsFillCloudDownloadFill,
   BsFillQuestionSquareFill,
+  BsQuestionCircle,
   BsSearch,
 } from "react-icons/bs";
 import LoginModal from "../Auth/LoginModal";
@@ -65,11 +68,11 @@ const Header = () => {
         <BsChevronDown className="DownArrow" />
         <div className="floatingOptions boxShadow1">
           <p className="floatingOption">
-            <BsBellFill />
+            <BsBell />
             Notification Preference
           </p>
           <p className="floatingOption">
-            <BsFillQuestionSquareFill />
+            <BsQuestionCircle />
             24/7 Customer Help
           </p>
           <p className="floatingOption">
@@ -77,7 +80,7 @@ const Header = () => {
             Advertise
           </p>
           <p className="floatingOption">
-            <BsFillCloudDownloadFill />
+            <BsDownload />
             Download App
           </p>
         </div>

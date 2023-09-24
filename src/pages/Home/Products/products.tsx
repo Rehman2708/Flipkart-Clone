@@ -12,7 +12,7 @@ const Products = () => {
   return (
     <>
       <div className="products">
-        <div className="prodIntro flexCenter">
+        <div className="prodIntro prodIntro1 flexCenter">
           <h1 className="prodIntroText">Beauty, Foods, Toys & More</h1>
           <a href="/allproducts">
             <button className="prodIntroButton">VIEW ALL</button>
@@ -61,9 +61,11 @@ const Products = () => {
         </div>
       </div>
       <div className="products">
-        <div className="prodIntro flexCenter">
+        <div className="prodIntro prodIntro1 flexCenter">
           <h1 className="prodIntroText">Monsoon Essentials</h1>
-          <button className="prodIntroButton">VIEW ALL</button>
+          <a href="/allproducts">
+            <button className="prodIntroButton">VIEW ALL</button>
+          </a>
         </div>
         <div className="ProductsCarousel">
           <div style={{ width: "100%" }}>

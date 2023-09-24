@@ -1,9 +1,30 @@
+@import "../../../assets/styles/global.scss";
+
 .filters {
     margin: 10px;
     margin-right: 0;
-    padding: 10px;
     background-color: var(--basicWhite);
     height: fit-content;
+
+    .mainHead {
+        margin: 0;
+        font-size: $mmFont;
+        font-weight: 400;
+    }
+
+    .filterHead {
+        margin: 0 0 10px 0;
+        font-size: $msFont;
+        font-weight: 500;
+        color: var(--grey);
+        text-transform: uppercase;
+        // padding: 15px;
+    }
+
+    .paddingDiv {
+        padding: 15px;
+        border-bottom: 1px solid var(--grey);
+    }
 
     .rangeInput {
         width: 100%;
@@ -16,20 +37,43 @@
 
         select {
             width: 100px;
+            background-color: transparent;
+            height: 25px;
+            outline: none;
+            border-color: var(--grey);
         }
     }
 
-    .searchInput {
-        width: 80%;
-        border: none;
-        border-bottom: 1px solid var(--grey);
-        outline: none;
+    .searchInputDiv {
+        position: relative;
+        justify-content: flex-start;
+
+        .searchIcon {
+            position: absolute;
+            left: 0px;
+            top: 0;
+        }
+
+        .searchInput {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid var(--grey);
+            outline: none;
+            padding-left: 20px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
     }
 
     .checkboxDiv {
         display: flex;
         gap: 5px;
         align-items: center;
+
+        .checkboxLabel {
+            font-size: $msFont;
+            margin: 5px 0;
+        }
     }
 
     .MuiAccordion-root {
@@ -40,11 +84,17 @@
         }
 
         .MuiAccordionDetails-root {
-            padding: 0 8px;
+            padding: 0 0px;
+        }
+
+        .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+            align-items: center;
+            display: flex;
         }
 
         .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
-            min-height: 25px;
+            align-items: flex-start;
+            min-height: 15px;
         }
     }
 }
