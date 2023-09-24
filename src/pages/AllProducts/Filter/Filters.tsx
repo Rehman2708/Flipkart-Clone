@@ -13,9 +13,9 @@ const Filters = () => {
       <h1>Filters</h1>
       <div>
         <h2>Price</h2>
-        <input type="range" min="0" max="100" />
+        <input className="rangeInput" type="range" min="0" max="100" />
       </div>
-      <div>
+      <div className="rangeInputDiv">
         <select name="" id="">
           <option value="">Min</option>
           <option value="">100</option>
@@ -33,12 +33,17 @@ const Filters = () => {
         </select>
       </div>
       <div>
-        <input type="text" />
-        <div>
+        <input
+          className="searchInput"
+          type="text"
+          placeholder="Search for brand"
+        />
+        <div className="checkboxDiv">
           <input type="checkbox" />
           <p>Mobile</p>
         </div>
       </div>
+      <div className="divider"></div>
       <Accordion defaultExpanded={true}>
         <AccordionSummary
           expandIcon={<BsChevronDown />}
@@ -48,7 +53,7 @@ const Filters = () => {
           <Typography>Discount</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <div>
+          <div className="checkboxDiv">
             <input type="checkbox" />
             <p>Mobile</p>
           </div>
