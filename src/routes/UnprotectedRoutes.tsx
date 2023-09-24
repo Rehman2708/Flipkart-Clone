@@ -9,6 +9,11 @@ export const UnprotectedRoutes = [
     name: "Home",
   },
   {
+    path: "/home",
+    component: Home,
+    name: "Home",
+  },
+  {
     path: "/details/:id",
     component: Detailpage,
     name: "Detail",
