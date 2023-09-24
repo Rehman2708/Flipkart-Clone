@@ -4,6 +4,7 @@
     --secondaryColor: #5d4b24;
     --textColor: #000;
     --orangeButton: #FD5729;
+    --greenColor: #00C14E;
     --bgColor1: #3d3f45;
     --bgColor2: #2b2d35;
     --grey: #808080c7;
@@ -44,6 +45,11 @@ a {
     align-items: center;
 }
 
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
 .boxShadow1 {
     box-shadow: #00000040 0px 14px 28px, #00000038 0px 10px 10px;
 }
@@ -56,6 +62,12 @@ $box-shadow: #00000040 0px 14px 28px, #00000038 0px 10px 10px;
 
 a {
     color: inherit;
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--grey);
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
