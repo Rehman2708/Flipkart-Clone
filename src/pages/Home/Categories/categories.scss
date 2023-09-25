@@ -40,24 +40,25 @@
             top: 110px;
             width: 200px;
             background-color: var(--basicWhite);
-            border-radius: 3px;
+            border-radius: 8px;
             display: none;
             z-index: 2;
 
             .floatingOption {
-                font-size: $msFont;
-                font-weight: 500;
+                font-size: $xsFont;
+                font-weight: 400;
                 // border-bottom: 1px solid var(--boxShadow1);
-                color: var(--textColor);
+                color: var(--grey);
                 display: flex;
                 gap: 10px;
                 margin: 0;
-                padding: 15px 10px;
+                padding: 13px 10px;
 
                 &:hover {
                     background-color: var(--boxShadow2);
                     cursor: pointer;
-                    color: var(--primaryColor);
+                    color: var(--textColor);
+                    font-weight: 500;
                 }
 
                 svg {
@@ -97,8 +98,8 @@
     }
 
     .catCarouselIcon {
-        height: 120px;
-        width: 50px;
+        height: 100px;
+        width: 40px;
         background-color: var(--basicWhite);
         border-radius: 3px;
         box-shadow: $box-shadow;
@@ -106,6 +107,57 @@
 
     img {
         width: 100%;
-        aspect-ratio: 4/1;
+        aspect-ratio: 5/1;
+    }
+}
+
+@media(max-width:900px) {
+    .categories {
+        overflow-x: scroll;
+        gap: 20px;
+        justify-content: flex-start;
+
+        #fashion {
+            padding: 0;
+
+            .floatingOptions {
+                display: none;
+
+            }
+
+            .DownArrow {
+                display: none;
+            }
+        }
+
+        .category {
+            .categoryImg {
+                height: 40px;
+            }
+
+            .categoryName {
+                width: 80px;
+                font-size: $xsFont;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    .carousel {
+        .catCarouselIcon {
+            height: 50px;
+            width: 20px;
+        }
+
+        img {
+            aspect-ratio: 4/1;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        height: 0px !important;
     }
 }

@@ -172,8 +172,6 @@ const Categories = () => {
             gutter={0}
             autoPlay={true}
             infiniteLoop={true}
-            timeout={0}
-            disableSwipe={true}
             autoPlaySpeed={1000}
             leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
             rightChevron={<BsChevronCompactRight className="catCarouselIcon" />}
