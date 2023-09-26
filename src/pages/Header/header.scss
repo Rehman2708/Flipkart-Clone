@@ -143,3 +143,32 @@
         }
     }
 }
+
+@media(max-width:500px) {
+    .header {
+        justify-content: space-between !important;
+        padding: 0 20px;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 30px);
+
+        .headInputTextDiv {
+            display: none;
+        }
+
+        .fkLogo {
+            width: 60px;
+        }
+
+        .plusExplore {
+            font-size: 0.6rem;
+        }
+
+        .headOption {
+            display: none;
+        }
+
+        .loginButton {
+            padding: 0 20px;
+        }
+    }
+}

@@ -79,6 +79,11 @@
 
         p {
             margin: 3px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 90%;
+            text-align: center;
         }
 
         .discountRate {
@@ -88,6 +93,81 @@
         .prodCaption {
             color: var(--grey);
             font-size: $msFont;
+        }
+    }
+}
+
+.mobileProductView {
+    display: none;
+    justify-content: space-between;
+    margin: 0 10px;
+    font-weight: 500;
+    align-items: center;
+    font-size: $msFont;
+
+    .prodIntroButton {
+        border: none;
+        background-color: var(--primaryColor);
+        color: var(--basicWhite);
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-weight: 300;
+        font-size: $xsFont;
+    }
+}
+
+@media(max-width:500px) {
+    .mobileProductView {
+        display: flex;
+    }
+
+    .products {
+        padding: 0;
+
+        .prodIntro1 {
+            display: none;
+        }
+
+        .prodIntro {
+            padding: 0 10px;
+            width: 150px;
+        }
+
+        .ProductsCarousel {
+            width: 100%;
+
+            .catCarouselIcon {
+                height: 50px;
+                width: 20px;
+            }
+        }
+
+        .productData {
+            min-width: 150px;
+            cursor: pointer;
+
+            &:hover img {
+                scale: 0.9;
+            }
+
+            img {
+                transition: scale 0.1s linear;
+                margin-bottom: 10px;
+                height: 110px;
+                width: 80px;
+                object-fit: contain;
+            }
+
+            p {
+                margin: 3px;
+                font-size: $msFont;
+                width: 110px;
+
+            }
+
+            .discountRate {
+                font-size: $xsFont;
+            }
         }
     }
 }

@@ -4,8 +4,6 @@
     display: grid;
     grid-template-columns: 300px calc(100% - 300px);
 
-
-
     .productGrid {
         display: grid;
         justify-content: center;
@@ -92,6 +90,47 @@
     @media(min-width:1400px) {
         .productGrid {
             grid-template-columns: 24% 23% 23% 24%;
+        }
+    }
+}
+
+@media(max-width:500px) {
+    .mainProdGrid {
+        grid-template-columns: 100%;
+
+        .mobileFilters {
+            display: none;
+        }
+
+        .productGrid {
+            gap: 10px;
+            margin: 5px;
+            padding: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            max-height: fit-content;
+
+            .singleProduct {
+                padding: 5px 10px;
+                box-shadow: $box-shadow1;
+
+                .productImage {
+                    height: 120px;
+                }
+
+                .ratings {
+                    display: grid;
+                    grid-template-columns: 45px 50%;
+
+                    .assuredImg {
+                        margin-top: -10px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .bankOffer {
+                    margin: 5px 0;
+                }
+            }
         }
     }
 }

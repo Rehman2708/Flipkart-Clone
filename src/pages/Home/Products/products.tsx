@@ -11,6 +11,12 @@ const Products = () => {
 
   return (
     <>
+      <h3 className="mobileProductView">
+        Beauty, Foods, Toys & More
+        <a href="/allproducts">
+          <button className="prodIntroButton">VIEW ALL</button>
+        </a>
+      </h3>
       <div className="products">
         <div className="prodIntro prodIntro1 flexCenter">
           <h1 className="prodIntroText">Beauty, Foods, Toys & More</h1>
@@ -28,11 +34,10 @@ const Products = () => {
             <ItemsCarousel
               requestToChangeActive={(value: any) => setaAtive(value)}
               activeItemIndex={active}
-              numberOfCards={4}
+              numberOfCards={innerWidth < 1000 ? 3 : 5}
               gutter={0}
               autoPlay={true}
               timeout={0}
-              disableSwipe={true}
               leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
               rightChevron={
                 <BsChevronCompactRight className="catCarouselIcon" />
@@ -46,11 +51,13 @@ const Products = () => {
                         <div className="productData flexCenter">
                           <img src={ele.image} alt="" />
                           <p>{ele.value}</p>
-                          {ele.discount && (
-                            <p className="discountRate">
-                              Upto {ele.discount}% off
-                            </p>
-                          )}
+                          <p className="discountRate">
+                            {ele.discount ? (
+                              <>Upto {ele.discount}% off</>
+                            ) : (
+                              <>From {ele.price}</>
+                            )}
+                          </p>
                         </div>
                       </a>
                     </div>
@@ -60,6 +67,12 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <h3 className="mobileProductView">
+        Monsoon Essentials
+        <a href="/allproducts">
+          <button className="prodIntroButton">VIEW ALL</button>
+        </a>
+      </h3>
       <div className="products">
         <div className="prodIntro prodIntro1 flexCenter">
           <h1 className="prodIntroText">Monsoon Essentials</h1>
@@ -76,7 +89,6 @@ const Products = () => {
               gutter={0}
               autoPlay={true}
               timeout={0}
-              disableSwipe={true}
               leftChevron={<BsChevronCompactLeft className="catCarouselIcon" />}
               rightChevron={
                 <BsChevronCompactRight className="catCarouselIcon" />
@@ -89,12 +101,14 @@ const Products = () => {
                       <a href={`/details/${ele.id}`}>
                         <div className="productData flexCenter">
                           <img src={ele.image} alt="" />
-                          <p>{ele.value}</p>
-                          {ele.discount && (
-                            <p className="discountRate">
-                              Upto {ele.discount}% off
-                            </p>
-                          )}
+                          <p className="productName">{ele.value}</p>
+                          <p className="discountRate">
+                            {ele.discount ? (
+                              <>Upto {ele.discount}% off</>
+                            ) : (
+                              <>From {ele.price}</>
+                            )}
+                          </p>
                         </div>
                       </a>
                     </div>

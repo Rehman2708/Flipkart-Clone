@@ -179,3 +179,50 @@
         }
     }
 }
+
+@media(max-width:500px) {
+    .detailProducts .recentProducts {
+        display: none;
+    }
+
+    .detailMain {
+        grid-template-columns: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+
+        .productImgDiv {
+            width: calc(100% - 20px);
+            display: grid;
+            place-items: center;
+
+            .productImage {
+                width: 80%;
+            }
+        }
+
+        .prodButtonsDiv {
+            width: 100%;
+            margin-bottom: 10px;
+            gap: 20px;
+
+            .buyButton {
+                height: 40px;
+                gap: 5px;
+                font-size: $msFont;
+            }
+        }
+
+        .detailRight {
+            max-height: fit-content;
+
+            .offer {
+                font-size:
+                    $xsFont
+            }
+
+            .section {
+                gap: 15px;
+            }
+        }
+    }
+}

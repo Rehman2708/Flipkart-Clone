@@ -88,3 +88,37 @@
         }
     }
 }
+
+@media(max-width:700px) {
+    .loginModal {
+        width: 80vw;
+        overflow: hidden;
+        grid-template-columns: 100%;
+        height: 460px;
+
+        .modalLeft {
+            height: fit-content;
+
+            .introImg {
+                display: none;
+            }
+
+            .loginHead {
+                font-size: $mFont;
+                margin: 5px 0;
+            }
+
+            .loginHeadText {
+                font-size: $sFont;
+            }
+        }
+
+        .modalRight {
+            position: static;
+
+            .loginButton {
+                padding: 10px 0;
+            }
+        }
+    }
+}

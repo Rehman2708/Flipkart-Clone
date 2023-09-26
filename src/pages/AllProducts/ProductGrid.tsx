@@ -6,7 +6,9 @@ import { AiFillStar } from "react-icons/ai";
 const ProductGrid = () => {
   return (
     <div className="mainProdGrid">
-      <Filters />
+      <div className="mobileFilters">
+        <Filters />
+      </div>
       <div className="productGrid">
         {products.map((ele: any, i: number) => (
           <a href={`/details/${ele.id}`}>
